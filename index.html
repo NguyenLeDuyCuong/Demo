@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{noidung}}</h1>
+        <h1>{{mess}}</h1>
+        <input type="text" v-model="mess">
+        <span v-if="conditonal==0">Test 0</span>
+        <span v-else-if="conditonal==1">Test 1</span>
+        <span v-else>Test 2</span>
+<!-- demo v-if hỗ trợ cho template và v-show thì không -->
+        <template v-if="!message">
+            <h1>You must send</h1>
+            <p>Dispatch a messenger</p>
+            <p>To nearby ....</p>
+        </template>
+        <button
+        <textarea name="" id="" cols="30" rows="10" v-model="message"></textarea>
+        <button v-show='!message'>
+            send word to ...
+        </button>
+<!--áp dụng v-for -->
+        <ul>
+            <li v-for="(key,l) in stories ">{{$index}}: {{key}}: {{l}}</li>
+        </ul>
+<!--áp dụng v-on -->
+        <h1>Count : {{counter}}</h1>
+        <button @click="counter+=5">Click me</button>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
